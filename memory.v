@@ -1,9 +1,9 @@
 module memory(clk_i, rst_i, addr_i, wdata_i, rdata_o, wr_rd_i, valid_i, ready_o);
-//1kb memory with 16 bit width
-//width=16, depth=1024/16 = 64,addr_width=6
+//1KB memory with 16 bit width
+//width=16, depth=1024*8/16 = 512,addr_width=9
 parameter WIDTH=16;
-parameter DEPTH=64;
-parameter ADDR_WIDTH=6;
+parameter DEPTH=512;
+parameter ADDR_WIDTH=9;
 input clk_i,rst_i;
 input [ADDR_WIDTH-1:0] addr_i;
 input [WIDTH-1:0] wdata_i;
